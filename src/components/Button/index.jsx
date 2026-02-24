@@ -1,4 +1,4 @@
-import {ContainerButton} from './styles';
+import {ContainerButton} from './styles.js';
 
 
 export function Button({children, ...props}){

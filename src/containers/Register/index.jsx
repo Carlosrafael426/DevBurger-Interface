@@ -16,9 +16,10 @@ import {
 import { Button } from '../../components/Button/index.jsx';
 import Logo from '../../assets/Logo1.svg';
 
-export function Login() {
+export function Register() {
   const schema = yup
     .object({
+      name: yup.string().required('Campo obrigatório'),
       email: yup
         .string()
         .email('Digite um email válido')
@@ -26,6 +27,10 @@ export function Login() {
       password: yup
         .string()
         .min(6, 'Senha deve ter no mínimo 6 caracteres')
+        .required('Campo obrigatório'),
+        confirmPassword: yup
+        .string()
+        .oneOf([yup.ref('password'), null], 'As senhas devem ser iguais')
         .required('Campo obrigatório'),
     })
     .required();
@@ -39,14 +44,15 @@ export function Login() {
   });
   const onSubmit = async (data) => {
     const response = await toast.promise(
-      api.post('/sessions', {
+      api.post('/users', {
+        name: data.name,
         email: data.email,
         password: data.password,
       }),
       {
         pending: 'Verificando suas credenciais...',
-        success: 'Login realizado com sucesso!',
-        error: 'Falha no login. Verifique suas credenciais.',
+        success: 'Cadastro realizado com sucesso!',
+        error: 'Falha no cadastro. Verifique suas credenciais.',
       },
     );
   };
@@ -58,9 +64,7 @@ export function Login() {
       </LeftContainer>
       <RightContainer>
         <Title>
-          Olá, seja bem vindo ao <span>Dev Burguer!</span>
-          <br />
-          Acesse com seu <span>Login e senha.</span>
+          Criar conta
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <InputContainer>
