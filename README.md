@@ -1,16 +1,40 @@
-# React + Vite
+# DevBurger-Interface 🍔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface frontend da aplicação **DevBurger**, uma hamburgueria online desenvolvida com **React + Vite**, conectada com uma API REST para gerenciar produtos, categorias, carrinho de compras e checkout.
 
-Currently, two official plugins are available:
+Este projeto faz parte do sistema completo **DevBurger**, composto por:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🛠 **Backend**: API REST (Node.js/Express) — responsável pela lógica de produtos, usuários e pedidos.  
+- 💻 **Frontend**: Interface construída com React que consome a API e exibe a loja interativa.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧪 Tecnologias
 
-## Expanding the ESLint configuration
+O projeto foi criado com as seguintes tecnologias principais:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✔ React  
+✔ Vite  
+✔ Styled Components  
+✔ Axios (para chamadas à API)  
+✔ React Router DOM  
+✔ ESLint + Prettier  
+✔ Hooks do React (useState, useEffect, context etc.) :contentReference[oaicite:1]{index=1}
+
+---
+
+## 🚀 Instalação
+
+### Requisitos
+
+Antes de começar, você precisa ter instalado:
+
+✔ Node.js  
+✔ NPM ou Yarn
+
+### Instalando a interface
+
+1. Clone o repositório  
+```bash
+git clone https://github.com/Carlosrafael426/DevBurger-Interface.git
+
